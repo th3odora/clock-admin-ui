@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Action } from './model/action';
-import { ActionService} from './services/action.service';
+import { Action } from '../model/action';
+import { ActionService} from '../services/action.service';
 
 @Component({
   selector: 'clock-actions',

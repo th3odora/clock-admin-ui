@@ -7,8 +7,8 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 //import { RouterModule }   from '@angular/router';
 import { InMemoryDataService } from './in-memory-data.service';
 
-import { AppComponent } from './app.component';
-import { ActionsComponent } from './actions.component';
+import { AppComponent } from './components/app.component';
+import { ActionsComponent } from './components/actions.component';
 import { ActionService }    from './services/action.service';
 
 @NgModule({
