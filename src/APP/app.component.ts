@@ -1,5 +1,5 @@
 import{Component}from '@angular/core';
-import { ActionsComponent } from './actions.component';
+import { ActionsComponent } from './actions/actions.component';
 
 @Component({
   selector: 'app-root',
