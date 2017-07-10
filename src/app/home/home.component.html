@@ -1,0 +1,17 @@
+<div>
+<p>List of available operations on Compass Clocks</p>
+<!--<div><action-detail>[action]="selectedAction"</action-detail></div>-->
+</div>
+<!--<form (submit)="addName()">
+  <input [(ngModel)]="newName" name="newName" placeholder="Awesome Computer Scientist">
+  <button type="submit">Add</button>
+</form>-->
+    <ul class="operations">
+      <li *ngFor="let operation of operations"
+        [class.selected]="operation === selectedOperation"
+        (click)="onSelect(operation)">
+        <span class="badge">{{operation.label}}</span> {{operation.code}}
+      </li>
+    </ul>
+ <operation-detail [operation]="selectedOperation"></operation-detail>
+ <app-controls></app-controls>

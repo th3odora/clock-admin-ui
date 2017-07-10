@@ -1,0 +1,224 @@
+[
+  {
+    "code": "CREATE",
+    "label": "Create a new clock",
+    "parameters": [
+      {
+        "label": "Business key",
+        "code": "BUSINESS_KEY",
+        "mandatory": true
+      },
+      {
+        "label": "Clock start date",
+        "code": "START_DATE",
+        "mandatory": true
+      },
+      {
+        "label": "Clock target duration",
+        "code": "TARGET_DURATION",
+        "mandatory": false
+      },
+      {
+        "label": "Clock legal duration",
+        "code": "LEGAL_DURATION",
+        "mandatory": true
+      },
+      {
+        "label": "Enable clock suspensions",
+        "code": "SUSPENSIONS",
+        "mandatory": false
+      },
+      {
+        "label": "Clock description",
+        "code": "DESCRIPTION",
+        "mandatory": true
+      }
+    ]
+  },
+  {
+    "code": "EXTEND",
+    "label": "Extend a running clock",
+    "parameters": [
+      {
+        "label": "Clock ID",
+        "code": "CLOCK_ID",
+        "mandatory": true
+      },
+      {
+        "label": "Clock start date",
+        "code": "START_DATE",
+        "mandatory": false
+      },
+      {
+        "label": "Clock target duration",
+        "code": "TARGET_DURATION",
+        "mandatory": false
+      },
+      {
+        "label": "Clock legal duration",
+        "code": "LEGAL_DURATION",
+        "mandatory": false
+      },
+      {
+        "label": "Enable clock suspensions",
+        "code": "SUSPENSIONS",
+        "mandatory": false
+      },
+      {
+        "label": "Clock description",
+        "code": "DESCRIPTION",
+        "mandatory": false
+      },
+      {
+        "label": "Clock end date",
+        "code": "END_DATE",
+        "mandatory": false
+      }
+    ]
+  },
+  {
+    "code": "UPDATE",
+    "label": "Update the properties of a clock",
+    "parameters": [
+      {
+        "label": "Business key",
+        "code": "BUSINESS_KEY",
+        "mandatory": false
+      },
+      {
+        "label": "Clock start date",
+        "code": "START_DATE",
+        "mandatory": false
+      },
+      {
+        "label": "Clock target duration",
+        "code": "TARGET_DURATION",
+        "mandatory": false
+      },
+      {
+        "label": "Clock legal duration",
+        "code": "LEGAL_DURATION",
+        "mandatory": false
+      },
+      {
+        "label": "Enable clock suspensions",
+        "code": "SUSPENSIONS",
+        "mandatory": false
+      },
+      {
+        "label": "Clock description",
+        "code": "DESCRIPTION",
+        "mandatory": false
+      },
+      {
+        "label": "Clock end date",
+        "code": "END_DATE",
+        "mandatory": false
+      }
+    ]
+  },
+  {
+    "code": "TERMINATE",
+    "label": "Terminate a running clock",
+    "parameters": [
+      {
+        "label": "Clock ID",
+        "code": "CLOCK_ID",
+        "mandatory": true
+      },
+      {
+        "label": "Clock end date",
+        "code": "END_DATE",
+        "mandatory": true
+      }
+    ]
+  },
+  {
+    "code": "SEARCH",
+    "label": "Search clocks by criteria",
+    "parameters": [
+      {
+        "label": "Clock ID",
+        "code": "CLOCK_ID",
+        "mandatory": false
+      },
+      {
+        "label": "Reference date",
+        "code": "REFERENCE_DATE",
+        "mandatory": false
+      },
+      {
+        "label": "Business key",
+        "code": "BUSINESS_KEY",
+        "mandatory": false
+      }
+    ]
+  },
+  {
+    "code": "STATUS",
+    "label": "Get the state of a clock on specific date",
+    "parameters": [
+      {
+        "label": "Clock ID",
+        "code": "CLOCK_ID",
+        "mandatory": true
+      },
+      {
+        "label": "Reference date",
+        "code": "REFERENCE_DATE",
+        "mandatory": true
+      },
+      {
+        "label": "Enable clock suspensions",
+        "code": "SUSPENSIONS",
+        "mandatory": true
+      }
+    ]
+  },
+  {
+    "code": "RESURRECT",
+    "label": "Resurrect a terminated clock",
+    "parameters": [
+      {
+        "label": "Business key",
+        "code": "BUSINESS_KEY",
+        "mandatory": false
+      },
+      {
+        "label": "Clock ID",
+        "code": "CLOCK_ID",
+        "mandatory": true
+      },
+      {
+        "label": "Clock start date",
+        "code": "START_DATE",
+        "mandatory": false
+      },
+      {
+        "label": "Clock target duration",
+        "code": "TARGET_DURATION",
+        "mandatory": false
+      },
+      {
+        "label": "Clock legal duration",
+        "code": "LEGAL_DURATION",
+        "mandatory": false
+      },
+      {
+        "label": "Enable clock suspensions",
+        "code": "SUSPENSIONS",
+        "mandatory": false
+      },
+      {
+        "label": "Clock description",
+        "code": "DESCRIPTION",
+        "mandatory": false
+      },
+      {
+        "label": "Clock end date",
+        "code": "END_DATE",
+        "mandatory": false
+      }
+    ]
+  }
+]

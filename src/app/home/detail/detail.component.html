@@ -1,0 +1,5 @@
+ <div *ngIf="operation">
+      <h2>{{operation.code}} input controls!</h2>      
+      <div *ngFor="let param of operation.parameters">
+        <h1>{{param.label}} {{param.mandatory}} {{param.code}}</h1>
+</div>
