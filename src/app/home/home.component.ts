@@ -34,8 +34,7 @@ export class HomeComponent implements OnInit {
 
   getOperations() {
     this.operationService.get()
-      .subscribe(
-         // (states: State[]) => this.states = states
+      .subscribe(       
         (operations: Operation[]) => this.operations = operations,
         error => this.errorMessage = <any>error
       );

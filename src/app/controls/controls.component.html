@@ -1,7 +1,10 @@
- <div *ngIf="operation">
+<!--<div *ngIf="operation">
     <h2>{{operation.code}} input controls!</h2>          
     <div *ngFor="let param of operation.parameters">
         <h1>{{param.label}} {{param.mandatory}} {{param.code}}</h1>       
-    </div>    
-     <app-controls></app-controls>
- </div>
+    </div>             
+ </div> -->
+ <div>
+      <h2>Dynanic form</h2>
+      <dynamic-form [questions]="questions"></dynamic-form>
+</div>

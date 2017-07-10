@@ -1,21 +1,28 @@
-import { Component }       from '@angular/core';
+import { Component, Input }       from '@angular/core';
 
 import { QuestionService } from './question.service';
+import { Operation } from "../shared/operation/operation";
 
 @Component({
   selector: 'app-controls',
-  template: `
-    <div>
-      <h2>Dynanic form</h2>
-      <dynamic-form [questions]="questions"></dynamic-form>
-    </div>
-  `,
+  templateUrl: 'controls.component.html',
   providers:  [QuestionService]
 })
 export class ControlsComponent {
+
+ // @Input() operation: Operation;
+
   questions: any[];
 
-  constructor(service: QuestionService) {
+  constructor(public service: QuestionService) {
     this.questions = service.getQuestions();
+   // this.renderOperation();
   }
+
+  renderOperation() {
+
+   // this.questions = this.service.getMyQuestions(this.operation);
+  }
+
+  
 }
