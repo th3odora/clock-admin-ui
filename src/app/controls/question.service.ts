@@ -4,6 +4,7 @@ import { DropdownQuestion } from './question-dropdown';
 import { QuestionBase }     from './question-base';
 import { TextboxQuestion }  from './question-textbox';
 import {  CheckBoxQuestion } from "./question-checkbox";
+import { Operation, Parameter } from "../shared/operation/operation";
 
 @Injectable()
 export class QuestionService {
@@ -53,7 +54,46 @@ export class QuestionService {
     return questions.sort((a, b) => a.order - b.order);
   }
 
-  getMyQuestions() {
+  getMyQuestions(operation: Operation) {
 
+    let questions: QuestionBase<any>[];
+    let param: any | Parameter;
+    for (param in operation.parameters) {
+      switch(param) {
+          case 'BUSINESS_KEY':{
+             questions.push( new TextboxQuestion({
+                key: param.code,
+                label: param.label,
+                value: 'business key',
+                required: param.required,
+                order: 1
+            }));
+          }
+          case 'SUSPENSIONS': {
+              questions.push(new CheckBoxQuestion({
+                key: param.code,
+                type: 'checkbox',
+                label: param.label,
+                required: param.required,
+                order: 3
+            }));
+          }
+          case 'DESCRIPTION': {
+             questions.push(new TextboxQuestion({
+                key: param.code,
+                label: param.label,
+                value: 'description',
+                required: param.required,
+                order: 2
+            })); 
+          }
+          default: { 
+            console.log("Invalid choice"); 
+            break;              
+          } 
+      }
+    }
+    return questions.sort((a, b) => a.order - b.order);
   }
+
 }
